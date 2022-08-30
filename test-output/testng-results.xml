@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-30T12:20:33 IST" name="Default suite" finished-at="2022-08-30T12:21:10 IST" duration-ms="37093">
+    <groups>
+    </groups>
+    <test started-at="2022-08-30T12:20:33 IST" name="Default test" finished-at="2022-08-30T12:21:10 IST" duration-ms="37093">
+      <class name="Sample.Realdevice">
+        <test-method signature="test()[pri:0, instance:Sample.Realdevice@82de64a]" started-at="2022-08-30T12:20:33 IST" name="test" finished-at="2022-08-30T12:21:10 IST" duration-ms="37062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- Sample.Realdevice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
