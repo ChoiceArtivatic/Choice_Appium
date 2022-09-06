@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Virtualdevice
@@ -25,6 +26,7 @@ public class Virtualdevice
 	    dc.setCapability("platformVersion","12");
 	    URL url=new URL("http://localhost:4723/wd/hub");
 	    
+	   // MobileDriver<WebElement>
 	    AndroidDriver<WebElement> driver=new AndroidDriver<WebElement>(url, dc);
 	    Thread.sleep(3000);
 	    WebElement ele = driver.findElementByXPath("//android.widget.TextView[@content-desc=\"Messages\"]"

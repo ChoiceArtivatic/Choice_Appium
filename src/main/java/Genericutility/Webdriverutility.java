@@ -31,7 +31,7 @@ public class Webdriverutility
 	 */
      	public void explicitwait(WebDriver driver,WebElement ele)
      	{
-     		WebDriverWait wait=new WebDriverWait(driver, 20);
+     		WebDriverWait wait=new WebDriverWait(driver,20);
      		wait.until(ExpectedConditions.visibilityOf(ele));
      	}
      	

@@ -16,7 +16,7 @@ public class NB_Login
 	@AndroidFindBy(accessibility = "Start New Application")
 	private WebElement startnewApplication;
 	
-	@AndroidFindBy(xpath  = "//android.widget.EditText[contains(@text, 'Search by Lead ID, LA name Search')]")
+	@FindBy(xpath  = "//android.widget.EditText[contains(@text, 'Search by Lead ID, LA name Search')]")
 	private WebElement searchbyLead;
 	
 	@AndroidFindBy(xpath =  "//android.widget.RadioButton[1]")

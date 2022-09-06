@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sample.Realdevice">
+      <class name="NB_Login.TC_No28FNA">
         <methods>
-          <include name="test"/>
+          <include name="LaunchApp"/>
+          <include name="CheckandverifyFirstnameFieldasmandatory"/>
         </methods>
-      </class> <!-- Sample.Realdevice -->
+      </class> <!-- NB_Login.TC_No28FNA -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

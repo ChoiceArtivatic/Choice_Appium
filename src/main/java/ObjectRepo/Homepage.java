@@ -13,23 +13,22 @@ public class Homepage
 	{
 		PageFactory.initElements(driver,this);
 	}
-	@AndroidFindBy(accessibility = "NB Login")
+	@AndroidFindBy(xpath = "//android.widget.ImageView[contains(@text, 'NB Login')]")
 	private WebElement NB_Login;
 	
-	@AndroidFindBy(accessibility ="Quick BI")
+	@AndroidFindBy(xpath ="Quick BI")
 	private WebElement QuickBi;
 	
 	@AndroidFindBy(accessibility = "Generate Application no")
 	private WebElement GenerateApplication_num;
 
-	@AndroidFindBy(accessibility = "Group\r\n"
-			+ "Business login")
+	@AndroidFindBy(accessibility = "Group Business login")
 	private WebElement GroupBusiness_Login;
 	
 	@AndroidFindBy(accessibility = "Gyandhara")
 	private WebElement Gyandhara;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]")
+	@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]")
 	private WebElement Hamburger_Icon;
 	
 	@AndroidFindBy(accessibility  = "Lead Management")
