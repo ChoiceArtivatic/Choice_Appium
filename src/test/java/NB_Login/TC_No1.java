@@ -12,6 +12,7 @@ public class TC_No1 extends BaseClass
    @Test
    public void VerifyNBLoginicon()
    {
+	   //Verify NB login icon
 	   MobileElement ele =(MobileElement) driver.findElementByAccessibilityId("NB Login");
 	   String actual = ele.getText();
 	   System.out.println(actual);

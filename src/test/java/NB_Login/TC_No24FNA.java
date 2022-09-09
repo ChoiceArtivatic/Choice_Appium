@@ -44,18 +44,18 @@ public class TC_No24FNA extends BaseClass
 		  //driver.findElementByAccessibilityId("Current residential state* Select Options Select Options").click();
 		  //driver.findElementByXPath("//*[contains(@text,'Views')]").click();
 
-		// driver.findelementbya("new UiScrollable(new    UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"WebView\").instance(0))").click();
+		 // driver.findelementbya("new UiScrollable(new    UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"WebView\").instance(0))").click();
 		  
-		// WebElement element=driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Total SA of existing life insurance policies* Enter details')]"));
-		  //TouchActions action = new TouchActions(driver);
-		  //action.scroll(element, 10, 100);
-		  //action.perform();
+		 // WebElement element=driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Total SA of existing life insurance policies* Enter details')]"));
+		 //TouchActions action = new TouchActions(driver);
+		 //action.scroll(element, 10, 100);
+		 //action.perform();
 
 
 		  
-		//  WebElement ele = driver.findElementByAccessibilityId("Gender");
+		 //  WebElement ele = driver.findElementByAccessibilityId("Gender");
 		 
 		 // org.openqa.selenium.support.ui.Select sel=new org.openqa.selenium.support.ui.Select(ele);
-		  //sel.selectByVisibleText("Transgender");
+		 //sel.selectByVisibleText("Transgender");
 		  
 		 }}

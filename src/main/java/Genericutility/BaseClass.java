@@ -34,8 +34,8 @@ public class BaseClass
 	    URL url=new URL("http://localhost:4723/wd/hub");
 	    driver=new AndroidDriver<WebElement>(url,dc);
 	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    //Thread.sleep(3000);
-	    
+	  
+	   
 	    //Login to Insure App using Employee Id and password
 	    WebElement empid = driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Enter Employee ID')]"));
 	    empid.click();

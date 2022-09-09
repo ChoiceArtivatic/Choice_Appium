@@ -22,15 +22,18 @@ public class NB_StartNewApplication
 	@AndroidFindBy(accessibility = "Proposal")
 	private WebElement proposal_btn;
 
-	public WebElement getFNA_btn() {
+	public WebElement getFNA_btn()
+	{
 		return FNA_btn;
 	}
 
-	public WebElement getBI_btn() {
+	public WebElement getBI_btn() 
+	{
 		return BI_btn;
 	}
 
-	public WebElement getProposal_btn() {
+	public WebElement getProposal_btn()
+	{
 		return proposal_btn;
 	}
 

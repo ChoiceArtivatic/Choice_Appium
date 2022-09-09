@@ -22,12 +22,12 @@ public class TC_No21FNA extends BaseClass
 		  driver.findElementByAccessibilityId("Continue").click();
 		  
 		 //Verify proposer page  
-		 driver.findElementByAccessibilityId("Proposer details").click();
+		// driver.findElementByAccessibilityId("Proposer details").click();
 		 ////android.view.View[@content-desc="LA details"]/android.view.View[1]/android.view.View/android.widget.ImageView[2]
 		 
 		 //Verify LA detials page
-		 driver.findElementByAccessibilityId("LA details").click();
-		// driver.findElement(By.xpath("//android.view.View[@content-desc=\"LA details\"]/android.view.View[1]/android.view.View/android.widget.ImageView[2]")).click();
+		// driver.findElementByAccessibilityId("LA details").click();
+		 driver.findElement(By.xpath("//android.view.View[@content-desc=\"LA details\"]/android.view.View[1]/android.view.View/android.widget.ImageView[2]")).click();
 		
 		 
 		 //Verify Suitability matrix page

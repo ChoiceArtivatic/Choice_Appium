@@ -15,11 +15,10 @@ public class TC_No3 extends BaseClass
 	   public void CheckandverifyNBloginScreen() throws Throwable
 	   {
 		   Thread.sleep(3000);
+		  //Click on Nb login icon and navigate to start new application
 		  driver.findElementByAccessibilityId("NB Login").click();
 		  Sample s=new Sample(driver);
-		// WebElement ele=s.getSearchbylead_link();
-		 //ele.click();
-		 //ele.sendKeys("123s");
+		
 		  
 		  WebElement ele = driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Search by Lead ID, LA name Search')]"));
 		  ele.click();
