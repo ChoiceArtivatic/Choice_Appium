@@ -1,20 +1,25 @@
 package La_Details_PSame;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Genericutility.BaseClass;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 
 public class TC_67FNA extends BaseClass
 {
 	@Test
-	public void CheckandverifyNextButton()
+	public void CheckandverifyNextButton() throws Throwable
 	{
+	  Thread.sleep(3000);
 	  driver.findElementByAccessibilityId("NB Login").click();
 	  driver.findElementByAccessibilityId("Start New Application").click();
 	  MobileElement newlead =(MobileElement) driver.findElement(By.xpath("//android.widget.RadioButton[1]"));
@@ -31,8 +36,8 @@ public class TC_67FNA extends BaseClass
 	  findElementByXPath("//android.widget.EditText[contains(@text, 'Last name*')]");
 	  ln.click(); ln.sendKeys("utkur");
 	  driver.hideKeyboard();
-	  
-	  //driver.findElement(By.xpath("//android.widget.ImageView[@content-desc='Gender Male']")).click();
+	 // driver.findElementByAccessibilityId("Gender\r\n"
+	  //		+ "Male").click();
 	  
 	  List<WebElement> list = driver.findElements(By.xpath("//android.view.View[@index='1']"));
 	  list.get(4).click();
@@ -43,6 +48,16 @@ public class TC_67FNA extends BaseClass
 	  driver.findElementByAccessibilityId("OK").click();
 	  driver.hideKeyboard();
 
+	  
+	  MobileElement ac =(MobileElement) driver.findElementByAccessibilityId("Current residential state*\\nSelect Options");
+	  WebDriverWait wait=new WebDriverWait(driver, 20);
+	  wait.until(ExpectedConditions.visibilityOf(ac));
+	  ac.click();
+	   MobileElement element = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(true))" +
+		         ".scrollIntoView(new UiSelector().textContains(\"Planned retirement age* Enter details\"))"));
+      element.click();
+	  driver.findElementByAccessibilityId("Current residential state* Select Options").click();
 	  driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Planned retirement age* Enter details')]")).sendKeys("58");
 	  
 	  WebElement ae = driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Annual Expense Enter details INR')]"));  

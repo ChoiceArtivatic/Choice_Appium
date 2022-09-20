@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.appium.java_client.android.AndroidDriver;
   /**
   * This class contains all the Webdriver action methods
   */
@@ -20,7 +22,7 @@ public class Webdriverutility
 	 * wait for an element in particular page/dom
 	 * @param driver
 	 */
-     	public void implicitwait(WebDriver driver)
+     	public void implicitwait(AndroidDriver<WebElement> driver)
 	{
          driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);		
 	}
@@ -29,7 +31,7 @@ public class Webdriverutility
 	 * @param 
 	 *This method use for an element wait until the expected condition 
 	 */
-     	public void explicitwait(WebDriver driver,WebElement ele)
+     	public void explicitwait(AndroidDriver<WebElement> driver,WebElement ele)
      	{
      		WebDriverWait wait=new WebDriverWait(driver,20);
      		wait.until(ExpectedConditions.visibilityOf(ele));

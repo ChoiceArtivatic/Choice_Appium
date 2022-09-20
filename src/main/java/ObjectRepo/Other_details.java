@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class Other_details 
@@ -13,13 +14,13 @@ public class Other_details
 		PageFactory.initElements(driver,this);
 	}
 	@AndroidFindBy(xpath = "//android.widget.EditText[contains(@text, 'Agreed risk cover')]")
-	private WebElement Agreedriskcover_textfield;
+	private MobileElement Agreedriskcover_textfield;
 	
 	@AndroidFindBy(xpath = "//android.widget.EditText[contains(@text, 'Any other info Enter details')]")
-	private WebElement Anyotherinfo_textfield;
+	private MobileElement Anyotherinfo_textfield;
 	
 	@AndroidFindBy(accessibility  = "Next")
-	private WebElement Next_btn;
+	private MobileElement Next_btn;
 
 	public WebElement getAgreedriskcover_textfield() {
 		return Agreedriskcover_textfield;

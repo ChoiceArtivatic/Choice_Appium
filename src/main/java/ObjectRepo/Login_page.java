@@ -5,47 +5,49 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class Login_page
 {
 	
-	public Login_page(WebDriver driver)
+	public Login_page(AndroidDriver<MobileElement> driver)
 	{
 	   PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath  = "android.widget.EditText")
-	private WebElement employee_id;
+	@AndroidFindBy(xpath  = "//android.widget.EditText[contains(@text, 'Enter Employee ID')]")
+	private MobileElement employee_id;
 	
 	@AndroidFindBy(accessibility = "Login via Password")
-	private WebElement loginvia_password; 
+	private MobileElement loginvia_password; 
 	
-	@FindBy(className = "android.widget.EditText")
-	private WebElement password;
+	@AndroidFindBy(className = "//android.widget.EditText[contains(@text, 'Enter Password')]")
+	private MobileElement password;
 
-	@FindBy(className = "android.widget.Button")
-	private WebElement login_btn;
+	@AndroidFindBy(accessibility = "Login")
+	private MobileElement login_btn;
 
 	
-	public WebElement getPassword() 
-	{
-		return password;
-	}
-	
-	public WebElement getEmployee_id()
-	{     
+	public MobileElement getEmployee_id() {
 		return employee_id;
 	}
-	
-	public WebElement getLoginvia_password() 
-	{
+
+
+	public MobileElement getLoginvia_password() {
 		return loginvia_password;
 	}
-		
-    public WebElement getLogin_btn() 
-    {
+
+
+	public MobileElement getPassword() {
+		return password;
+	}
+
+
+	public MobileElement getLogin_btn() {
 		return login_btn;
 	}
+
 
 	public void Choicelogin(String empid,String password)
     {

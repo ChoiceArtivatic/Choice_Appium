@@ -1,17 +1,25 @@
 package Sample;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.testng.annotations.Test;
 
 import Genericutility.BaseClass;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 
 public class Demo1 extends BaseClass
 {
   @Test
-  public void test()
+  public void test() throws InterruptedException
   {
+	  Thread.sleep(3000);
 	  driver.findElementByAccessibilityId("NB Login").click();
 	  driver.findElementByAccessibilityId("Start New Application").click();
 	  MobileElement newlead =(MobileElement) driver.findElement(By.xpath("//android.widget.RadioButton[1]"));
@@ -23,30 +31,38 @@ public class Demo1 extends BaseClass
 	  wLib.explicitwait(driver, fn);
 	  fn.click();
 	  fn.sendKeys("Amaresha");
-		
+	
       WebElement ln = driver.
 	  findElementByXPath("//android.widget.EditText[contains(@text, 'Last name*')]");
 	  ln.click(); ln.sendKeys("utkur");
 	  driver.hideKeyboard();
-      
-	  WebElement source = (MobileElement) driver.findElementsByAccessibilityId("SomeAccessibilityID");
-	  WebElement target = (MobileElement) driver.findElementsByAccessibilityId("SomeOtherAccessibilityID");
-
-		/*
-		 * Point source = dragMe.getCenter(); Point target =
-		 * driver.findElementByAccessibilityId("dropzone").getCenter(); PointerInput
-		 * finger = new PointerInput(PointerInput.Kind.TOUCH, "finger"); Sequence
-		 * dragNDrop = new Sequence(finger, 1);
-		 * dragNDrop.addAction(finger.createPointerMove(Duration.ofMillis(0),
-		 * PointerInput.Origin.viewport(), source.x, source.y));
-		 * dragNDrop.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.
-		 * asArg()));
-		 * dragNDrop.addAction(finger.createPointerMove(Duration.ofMillis(700),
-		 * PointerInput.Origin.viewport(),target.x, target.y));
-		 * dragNDrop.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.
-		 * asArg())); driver.perform(Arrays.asList(dragNDrop));
-		 */
+	  
+	  driver.findElement(By.xpath("//android.widget.ImageView[starts-with(@content-desc,'Current')]")).click();
+	  
+	  driver.findElementByAccessibilityId("ANDHRA PRADESH").click();
+		
+	  MobileElement ele= (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+		  "new UiScrollable(new UiSelector().scrollable(false))" +
+		  ".scrollIntoView(new UiSelector().textContains(\"Planned\"))"));
+		//  ele.click();
+		 
+		  WebElement p=driver.findElement(By.xpath("//android.widget.EditText[starts-with(@text,'Planned')]"));
+		  p.click();
+		  p.sendKeys("56");
 
 
+	  MobileElement element = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+		        "new UiScrollable(new UiSelector().scrollable(false))" +
+		         ".scrollIntoView(new UiSelector().textContains(\"Total life cover based on future income*\"))"));
+	  
+	  
+
+	 // WebElement text = driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Planned retirement age* Enter details')]"));  
+	  //JavascriptExecutor js=(JavascriptExecutor)driver;
+	 // js.executeScript("window.scrollBy(0,750)"); 
+	  
+	
+     
+		 
   }
 }

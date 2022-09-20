@@ -15,7 +15,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class BaseClass
 {
-	public MobileDriver<WebElement> driver;
+	public AndroidDriver<WebElement> driver;
 	public Webdriverutility wLib=new Webdriverutility();
    @BeforeClass
    public void LaunchApp() throws Throwable
@@ -39,11 +39,11 @@ public class BaseClass
 	    //Login to Insure App using Employee Id and password
 	    WebElement empid = driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Enter Employee ID')]"));
 	    empid.click();
-	    empid.sendKeys("30000420");
+	    empid.sendKeys("30006131");
 	    driver.findElementByAccessibilityId("Login via Password").click();
 	    WebElement pass = driver.findElement(By.xpath("//android.widget.EditText[contains(@text, 'Enter Password')]"));
 	    pass.click();
-	    pass.sendKeys("Choice@30000420");
+	    pass.sendKeys("Choice@61322");
 	    driver.hideKeyboard();
 	    driver.findElementByAccessibilityId("Login").click();
 

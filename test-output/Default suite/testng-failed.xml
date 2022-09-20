@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sample.Sample1">
+      <class name="Quick_BI_LA_Equals_PR.Jeevan_Nivesh">
         <methods>
           <include name="LaunchApp"/>
-          <include name="test"/>
+          <include name="CheckandverifyQuickBIscreen"/>
         </methods>
-      </class> <!-- Sample.Sample1 -->
+      </class> <!-- Quick_BI_LA_Equals_PR.Jeevan_Nivesh -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

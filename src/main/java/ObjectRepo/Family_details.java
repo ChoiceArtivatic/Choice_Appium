@@ -4,11 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class Family_details 
 {
-	public Family_details(WebDriver driver)
+	public Family_details(AndroidDriver<MobileElement> driver)
 	{
 		PageFactory.initElements(driver,this);
 	}
