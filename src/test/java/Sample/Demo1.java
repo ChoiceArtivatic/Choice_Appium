@@ -28,7 +28,7 @@ public class Demo1 extends BaseClass
 	 
 	  driver.hideKeyboard(); 
 	  WebElement fn = driver.findElementByXPath("//android.widget.EditText[contains(@text, 'First name*')]");
-	  wLib.explicitwait(driver, fn);
+	  //wLib.explicitwait(driver, fn);
 	  fn.click();
 	  fn.sendKeys("Amaresha");
 	

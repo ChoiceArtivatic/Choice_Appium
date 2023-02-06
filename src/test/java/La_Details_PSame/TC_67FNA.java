@@ -28,7 +28,6 @@ public class TC_67FNA extends BaseClass
 	 
 	  driver.hideKeyboard(); 
 	  WebElement fn = driver.findElementByXPath("//android.widget.EditText[contains(@text, 'First name*')]");
-	  wLib.explicitwait(driver, fn);
 	  fn.click();
 	  fn.sendKeys("Amaresha");
 		

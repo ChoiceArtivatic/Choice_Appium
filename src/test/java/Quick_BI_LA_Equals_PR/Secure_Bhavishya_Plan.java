@@ -99,7 +99,7 @@ public class Secure_Bhavishya_Plan extends BaseClass
 
 		//Enter LA details 
 		WebElement fn = driver.findElementByXPath("//android.widget.EditText[contains(@text, 'First name*')]");
-		wLib.explicitwait(driver, fn);
+		//wLib.explicitwait(driver, fn);
 		fn.click();
 		fn.sendKeys("Amaresha");
 		driver.hideKeyboard(); 

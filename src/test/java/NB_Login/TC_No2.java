@@ -15,7 +15,6 @@ public class TC_No2 extends BaseClass
 		  //Check and verify Nb login screen
 		   driver.findElementByAccessibilityId("NB Login").click();
 		   WebElement sele =driver.findElementByAccessibilityId("Start New Application");
-		   wLib.explicitwait(driver, sele);
 		   System.out.println(sele.getText());
 		  //Assert.assertEquals(sele.getText(),"Start New Application");
 		   

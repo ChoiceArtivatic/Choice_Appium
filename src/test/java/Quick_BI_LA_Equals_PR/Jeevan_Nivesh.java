@@ -76,7 +76,7 @@ public class Jeevan_Nivesh extends BaseClass
 
 		//Enter LA details 
 		WebElement fn = driver.findElementByXPath("//android.widget.EditText[contains(@text, 'First name*')]");
-		wLib.explicitwait(driver, fn);
+		//wLib.explicitwait(driver, fn);
 		fn.click();
 		fn.sendKeys("Amaresha");
 		driver.hideKeyboard(); 

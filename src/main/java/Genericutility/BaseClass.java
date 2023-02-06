@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class BaseClass
 {
 	public AndroidDriver<WebElement> driver;
-	public Webdriverutility wLib=new Webdriverutility();
+	
    @BeforeClass
    public void LaunchApp() throws Throwable
    {
